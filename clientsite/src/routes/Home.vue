@@ -6,7 +6,18 @@
                 logo here
             </div>
             <div class="info-links">
-                info links will come here.
+               <div class="info-links-wrapper">
+                <div class="content flex-row">
+                    <div class="left-content"><i class="fa-solid fa-phone"></i></div>
+                    <div class="right-content">
+                        <a href="/">+237682449347</a>
+                        <a href="/">+237682449347</a>
+                    </div>
+                </div>
+                <div class="content flex-column">
+                    <div class="content-flex"><i class="fa-solid fa-envelope"></i><a href="/">codingherald@gmail.com</a></div>
+                    <div class="content-flex"><i class="fa-brands fa-whatsapp"></i><a href="/">codingherald</a></div></div>
+               </div>
             </div>
         </div>
         <div class="bottom-header">
@@ -28,13 +39,24 @@
                     </div>
                 </div>
             </div>
+            <div class="cart">
+                <div class="cart-wrapper">
+                    <button>
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </button>
+                    
+                </div>
+            </div>
         </div>
        </header>
+       <div class="landing-page">
+
+       </div>
     </main>
 </template>
 
 <style lang="scss" scoped>
-
+$prime-color:rgb(209, 59, 0);
 main{ 
     width:100vw;
     height:fit-content;
@@ -63,12 +85,84 @@ main{
              
             }
             .info-links{ 
-                width:30%;
+                width:35%;
                 height:100%;
-              
-                display: flex;
+                display:flex;
                 justify-content:center;
-                align-items: center;
+                align-items:center;
+
+              .info-links-wrapper{ 
+width:100%;
+                  display: flex;
+                  justify-content:space-evenly;
+                  align-items: center;
+                  .content{ 
+                    width:43%;
+                    height:80%;
+                    display:flex;
+                    align-items: center;
+                    justify-content: center;
+                    border:1px solid rgb(240, 238, 238);
+                    background:rgb(253, 253, 253);
+
+                    i{ 
+                        color:$prime-color;
+                    }
+                    a{ 
+                        color:rgb(116, 89, 89);
+                    }
+
+                    .left-content{ 
+                        width:25%;
+                        height:100%;
+                        display:flex;
+                        justify-content:flex-end;
+                        align-items:center;
+
+                        i{ 
+                            font-size:23px;
+                        }
+                    }
+                    .right-content{ 
+                        width:75%;
+                      
+                        display:flex;
+                        justify-content:flex-start;
+                        align-items:center;
+                        flex-direction: column;
+                    }
+                    .content-flex{ 
+                        width:100%;
+                        display:flex;
+                        justify-content:space-between;
+                        align-items:center;
+                      
+
+                        i {
+                            font-size:25px;
+                            width:25%;
+                            display:flex;
+                            justify-content:center;
+                            align-items:center;
+                           
+                        }
+                        a{ 
+                            width:75%;
+                            display:flex;
+                            font-size:14px;
+                            justify-content:flex-start;
+                            align-items:center;
+                        }
+                    }
+                  }
+
+                  .flex-row{ 
+                    flex-direction: row;
+                  }
+                  .flex-column{ 
+                    flex-direction:column;
+                  }
+              }
             }
         }
 
@@ -133,7 +227,7 @@ main{
                         display:flex;
                         justify-content:center;
                         align-items:center;
-                        border:1px solid rgb(216, 216, 216);
+                        border:1px solid $prime-color;
 
                         input{ 
                             width:75%;
@@ -152,7 +246,7 @@ main{
                             display:flex;
                             justify-content:center;
                             align-items:center;
-                            background:transparent;
+                            background:rgb(209, 59, 0);
                             border-radius: 0;
 
                             i{ 
@@ -163,6 +257,32 @@ main{
                             &:hover{ 
                                 background:rgb(219, 219, 219);
                             }
+                        }
+                    }
+                }
+            }
+            .cart{ 
+                width:8%;
+                height:100%;
+                display:flex;
+                justify-content:center;
+                align-items: center;
+
+                .cart-wrapper{ 
+                    width:100%;
+                    height:40px;
+                    display:flex;
+                    justify-content:center;
+                    align-items:center;
+                    border:1px solid $prime-color;
+
+                    button{ 
+                        outline:none;
+                        border:none;
+                        background:none;
+
+                        i{ 
+                            font-size:28px;
                         }
                     }
                 }
