@@ -56,10 +56,32 @@
         <h1>Get new arrivals from all around the world at one click. </h1>
         <router-link to="/">start shopping</router-link>
     </div>
+    <div class="carousel-wrapper">
+        <carousel :images="images" />
+    </div>
 </div>
        </div>
     </main>
 </template>
+
+<script > 
+import carousel from '../components/carousel.vue'
+import { ref } from 'vue'
+
+export default{ 
+    name:'carousel',
+   
+components: { 
+    carousel
+},setup(){ 
+    const images = ref([
+        "https://s3.envato.com/files/379243010/Retail%20Shopping%20(8).JPG","https://c8.alamy.com/comp/2J5A49J/e-commerce-ecommerce-web-banner-on-violet-background-various-shopping-icons-online-shopping-concept-2J5A49J.jpg","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBFNc5TzSEqnmcPGsXg13507uO5VX4OGXUqw&usqp=CAU","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiqYLK3MWQ6OFSTi1cyi2vC0rXw_9NF0nGnw&usqp=CAU"
+    ])
+    return{images}
+}
+}
+
+</script>
 
 <style lang="scss" scoped>
 $prime-color:rgb(209, 59, 0);
@@ -316,29 +338,47 @@ width:100%;
     }
     .landing-page{ 
         width:100vw;
-        height:80vh;
+        height:70vh;
         background:rgb(240, 240, 240);
 
         .main-wrapper{ 
             width:100%;
             height:100%;
+            display:flex;
+            justify-content: flex-start;
+            align-items: center;
+            position:relative;
 
             .main-wrapper-content{ 
-                width:45%;
+                width:55%;
                 height:fit-content;
-                border:2px solid $prime-color;
-                margin-left:10%;
-                padding-top:5%;
+                position:relative;
+                z-index: 1;
+              
+margin-left:10%;
+              padding:10px;
 
-                p{ 
+                h3{ 
                     font-size:13px;
-                    font-weight:400;
+                    font-weight:500;
+                    padding:0;
+                    margin:0;
+                    color:rgb(235, 234, 234);
+                    font-family:"Nunito Sans",sans-serif;
+                    word-spacing: 10px;
                 }
                 h1{ 
-                    font-size:50px;
-                    font-weight:500;
+                    font-size:55px;
+                    font-weight:600;
                     text-transform:capitalize;
-                    font-family: "Poppins",sans-serif;
+                    font-family: "Nunito Sans",sans-serif;
+                    margin:0;
+                    margin: 35px 0;
+                    margin-top:10px;
+                    padding:0;
+                    color:rgb(219, 219, 219);
+                    word-spacing:7px;
+                    line-height:
                 }
 
                 a{ 
@@ -352,7 +392,16 @@ width:100%;
                     background:$prime-color;
                     color:white;
                     text-transform:uppercase;
+                    margin:0;
                 }
+            }
+
+            .carousel-wrapper{ 
+                width:100%;
+                height:100%;
+position:absolute;
+top:0;
+left:0;
             }
         }
     }
