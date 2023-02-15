@@ -3,7 +3,7 @@
        <header>
         <div class="top-header">
             <div class="logo">
-                logo here
+                KEA-COMMERCE
             </div>
             <div class="info-links">
                <div class="info-links-wrapper">
@@ -42,7 +42,7 @@
             <div class="cart">
                 <div class="cart-wrapper">
                     <button>
-                        <i class="fa-solid fa-cart-shopping"></i>
+                        <i class="fa-solid fa-cart-shopping"></i> 10 items ~ $210
                     </button>
                     
                 </div>
@@ -50,7 +50,13 @@
         </div>
        </header>
        <div class="landing-page">
-
+<div class="main-wrapper">
+    <div class="main-wrapper-content">
+        <h3>kea-commerce at your sercice daily daily</h3>
+        <h1>Get new arrivals from all around the world at one click. </h1>
+        <router-link to="/">start shopping</router-link>
+    </div>
+</div>
        </div>
     </main>
 </template>
@@ -78,10 +84,16 @@ main{
 
             .logo{ 
                 width:20%;
-                height:100%;
+                height:90%;
                 display:flex;
                 justify-content:center;
                 align-items:center;
+                font-size:30px;
+                margin-left:3%;
+                font-weight:bolder;
+                font-family:"Grand Hotel", cursive;
+                box-shadow:2px 3px 1px rgb(230, 230, 230);
+                background:linear-gradient(to bottom left,white, rgb(219, 219, 219))
              
             }
             .info-links{ 
@@ -92,24 +104,28 @@ main{
                 align-items:center;
 
               .info-links-wrapper{ 
+                height:60%;
 width:100%;
                   display: flex;
                   justify-content:space-evenly;
                   align-items: center;
                   .content{ 
                     width:43%;
-                    height:80%;
+                    height:100%;
                     display:flex;
                     align-items: center;
                     justify-content: center;
                     border:1px solid rgb(240, 238, 238);
                     background:rgb(253, 253, 253);
+                    background:linear-gradient(to bottom left,white, rgb(219, 219, 219));
 
                     i{ 
                         color:$prime-color;
+                        font-size:14px;
                     }
                     a{ 
                         color:rgb(116, 89, 89);
+                        font-size:15px;
                     }
 
                     .left-content{ 
@@ -120,7 +136,7 @@ width:100%;
                         align-items:center;
 
                         i{ 
-                            font-size:23px;
+                            font-size:19px;
                         }
                     }
                     .right-content{ 
@@ -139,7 +155,7 @@ width:100%;
                       
 
                         i {
-                            font-size:25px;
+                            font-size:15px;
                             width:25%;
                             display:flex;
                             justify-content:center;
@@ -187,7 +203,7 @@ width:100%;
                 }
             }
             .bottom-header-routes{ 
-                width:60%;
+                width:55%;
                 height:100%;
                 display: flex;
                 justify-content:center;
@@ -209,7 +225,7 @@ width:100%;
                 }
             }
             .right-bottom-header{ 
-                width:20%;
+                width:22%;
                 height:100%;
                 display:flex;
                 justify-content:space-evenly;
@@ -251,7 +267,7 @@ width:100%;
 
                             i{ 
                                 font-size:22px;
-                                color:rgb(151, 149, 149);
+                                color:rgb(235, 235, 235);
                             }
 
                             &:hover{ 
@@ -262,7 +278,7 @@ width:100%;
                 }
             }
             .cart{ 
-                width:8%;
+                width:10%;
                 height:100%;
                 display:flex;
                 justify-content:center;
@@ -275,16 +291,67 @@ width:100%;
                     justify-content:center;
                     align-items:center;
                     border:1px solid $prime-color;
+                    background:$prime-color;
 
                     button{ 
+                        width:100%;
+                        height:100%;
+                        display:flex;
+                        justify-content:center;
+                        align-items:center;
                         outline:none;
                         border:none;
                         background:none;
+                        color:white;
+                        font-size:12px;
 
                         i{ 
-                            font-size:28px;
+                        color:white;
+                            font-size:19px;
                         }
                     }
+                }
+            }
+        }
+    }
+    .landing-page{ 
+        width:100vw;
+        height:80vh;
+        background:rgb(240, 240, 240);
+
+        .main-wrapper{ 
+            width:100%;
+            height:100%;
+
+            .main-wrapper-content{ 
+                width:45%;
+                height:fit-content;
+                border:2px solid $prime-color;
+                margin-left:10%;
+                padding-top:5%;
+
+                p{ 
+                    font-size:13px;
+                    font-weight:400;
+                }
+                h1{ 
+                    font-size:50px;
+                    font-weight:500;
+                    text-transform:capitalize;
+                    font-family: "Poppins",sans-serif;
+                }
+
+                a{ 
+                    width:200px;
+                    height:50px;
+                    font-size:15px;
+                    display:flex;
+                    justify-content:center;
+                    align-items:center;
+                    border-radius:3px;
+                    background:$prime-color;
+                    color:white;
+                    text-transform:uppercase;
                 }
             }
         }
