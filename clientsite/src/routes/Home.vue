@@ -11,7 +11,7 @@
                     <div class="left-content"><i class="fa-solid fa-phone"></i></div>
                     <div class="right-content">
                         <a href="/">+237682449347</a>
-                        <a href="/">+237682449347</a>
+                        
                     </div>
                 </div>
                 <div class="content flex-column">
@@ -21,7 +21,7 @@
             </div>
         </div>
         <div class="bottom-header">
-            <div class="left-bottom-header"><i class="fa-solid fa-bars"></i></div>
+            <div class="left-bottom-header">My account<i class="fa-solid fa-caret-down"></i></div>
             <div class="bottom-header-routes">
                 <div class="routes-wrapper">
                     <router-link to="/">Home</router-link>
@@ -94,14 +94,14 @@ main{
         height:23vh;
         padding:0;
         margin:0;
-        border-bottom: 1px solid rgb(185, 184, 184);
 
         .top-header{ 
             width:100%;
-            height:60%;
+            height:35%;
             display:flex;
             justify-content: space-between;
             align-items: center;
+            background:rgb(30,30,38);
            
 
             .logo{ 
@@ -110,12 +110,10 @@ main{
                 display:flex;
                 justify-content:center;
                 align-items:center;
-                font-size:30px;
-                margin-left:3%;
-                font-weight:bolder;
-                font-family:"Grand Hotel", cursive;
-                box-shadow:2px 3px 1px rgb(230, 230, 230);
-                background:linear-gradient(to bottom left,white, rgb(219, 219, 219))
+                font-size:20px;
+                font-weight:600;
+                color:white;
+                font-family: "Poppins",sans-serif;
              
             }
             .info-links{ 
@@ -127,31 +125,31 @@ main{
 
               .info-links-wrapper{ 
                 height:60%;
-width:100%;
+                width:100%;
                   display: flex;
                   justify-content:space-evenly;
                   align-items: center;
                   .content{ 
-                    width:43%;
+                    width:30%;
                     height:100%;
                     display:flex;
                     align-items: center;
                     justify-content: center;
-                    border:1px solid rgb(240, 238, 238);
-                    background:rgb(253, 253, 253);
-                    background:linear-gradient(to bottom left,white, rgb(219, 219, 219));
+                    
 
                     i{ 
-                        color:$prime-color;
-                        font-size:14px;
+                        color:rgb(236, 235, 235);
+                        font-size:12px;
                     }
                     a{ 
-                        color:rgb(116, 89, 89);
-                        font-size:15px;
+                        color:rgb(224, 224, 224);
+                        font-size:11px;
+                        font-family:"Nunito Sans",sans-serif;
+                        letter-spacing: 1px;
                     }
 
                     .left-content{ 
-                        width:25%;
+                        width:fit-content;
                         height:100%;
                         display:flex;
                         justify-content:flex-end;
@@ -162,7 +160,7 @@ width:100%;
                         }
                     }
                     .right-content{ 
-                        width:75%;
+                        min-width:80%;
                       
                         display:flex;
                         justify-content:flex-start;
@@ -187,7 +185,7 @@ width:100%;
                         a{ 
                             width:75%;
                             display:flex;
-                            font-size:14px;
+                            font-size:11px;
                             justify-content:flex-start;
                             align-items:center;
                         }
@@ -195,9 +193,11 @@ width:100%;
                   }
 
                   .flex-row{ 
+                    width:30%;
                     flex-direction: row;
                   }
                   .flex-column{ 
+                    width:50%;
                     flex-direction:column;
                   }
               }
@@ -206,10 +206,11 @@ width:100%;
 
         .bottom-header{ 
             width:100%;
-            height:40%;
+            height:65%;
             display:flex;
             justify-content:space-around;
             align-items:center;
+            box-shadow: 0 5px 5px 7px rgb(30,30,38);
           
 
             .left-bottom-header{ 
@@ -219,9 +220,13 @@ width:100%;
                 display:flex;
                 justify-content: center;
                 align-items:center;
+                // border-right:1px solid rgb(30,30,38);
+                font-size:20px;
+                font-weight: 600;
+                box-shadow: -5px 0 5px 3px rgb(30,30,38);
 
                i{ 
-                    font-size:26px;
+                    font-size:20px;
                 }
             }
             .bottom-header-routes{ 
@@ -378,7 +383,7 @@ margin-left:10%;
                     padding:0;
                     color:rgb(219, 219, 219);
                     word-spacing:7px;
-                    line-height:
+                    line-height:70px;
                 }
 
                 a{ 
