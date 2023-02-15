@@ -1031,8 +1031,6 @@ main {
                 position: relative;
                 margin: 0;
                 box-shadow: 0 0 1px 1px rgb(235, 233, 233);
-                border: 2px solid red;
-
                 .details {
                     width: 100%;
                     position: absolute;
