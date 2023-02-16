@@ -26,6 +26,9 @@
             <div class="bottom-header">
                 <div class="left-bottom-header">My account<i class="fa-solid fa-caret-down"></i></div>
                 <div class="bottom-header-routes">
+                    <div class="bottom-header-routes-top">
+                        top cont.
+                    </div>
                     <div class="routes-wrapper">
                         <router-link to="/">Home</router-link>
                         <router-link to="/">shop</router-link>
@@ -36,6 +39,9 @@
                 </div>
                 <div class="right-bottom-header">
                     <div class="content-wrapper">
+                        <div class="content-wrapper-top">
+                            top cont.
+                        </div>
                         <div class="search-box-wrapper">
                             <input type="search" name="search" id="search" placeholder="search item">
                             <button><i class="fa-solid fa-magnifying-glass"></i></button>
@@ -44,6 +50,7 @@
                 </div>
                 <div class="cart">
                     <div class="cart-wrapper">
+                        <div class="cart-content">cart cont.</div>
                         <button>
                             <i class="fa-solid fa-cart-shopping"></i> 10 items ~ $210
                         </button>
@@ -756,7 +763,7 @@ main {
 
 
             .left-bottom-header {
-                width: 15%;
+                width: 12%;
                 height: 100%;
                 cursor: pointer;
                 display: flex;
@@ -765,7 +772,7 @@ main {
                 // border-right:1px solid rgb(30,30,38);
                 font-size: 20px;
                 font-weight: 600;
-                box-shadow: -5px 0 5px 3px rgb(30, 30, 38);
+                box-shadow: -7px 0 5px 3px rgb(30, 30, 38);
 
                 i {
                     font-size: 20px;
@@ -773,15 +780,23 @@ main {
             }
 
             .bottom-header-routes {
-                width: 50%;
+                width: 45%;
                 height: 100%;
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                flex-direction:column;
 
+                .bottom-header-routes-top{ 
+                    width:100%;
+                    height:45%;
+                    display:flex;
+                    justify-content:center;
+                    align-items:center;
+                }
                 .routes-wrapper {
                     width: 100%;
-                    height: 100%;
+                    height: 45%;
                     display: flex;
                     justify-content: space-evenly;
                     align-items: center;
@@ -806,11 +821,17 @@ main {
                     width: 100%;
                     height: 100%;
                     display: flex;
-                    justify-content: space-evenly;
+                    justify-content:center;
                     align-items: center;
+                    flex-direction: column;
 
+                    .content-wrapper-top{ 
+                        width:100%;
+                        height:40%;
+                    }
                     .search-box-wrapper {
                         width: 100%;
+                        height:45%;
                         display: flex;
                         justify-content: center;
                         align-items: center;
@@ -818,7 +839,7 @@ main {
 
                         input {
                             width: 75%;
-                            height: 40px;
+                            height: 100%;
                             padding: 2px 5px;
                             padding-left: 15px;
                             outline: none;
@@ -827,7 +848,7 @@ main {
 
                         button {
                             width: 25%;
-                            height: 40px;
+                            height: 100%;
                             padding: 2px 5px;
                             outline: none;
                             border: none;
@@ -849,7 +870,7 @@ main {
             }
 
             .cart {
-                width: 10%;
+                width: 15%;
                 height: 100%;
                 display: flex;
                 justify-content: center;
@@ -857,22 +878,26 @@ main {
 
                 .cart-wrapper {
                     width: 100%;
-                    height: 40px;
+                    height: 100%;
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    border: 1px solid $prime-color;
-                    background: $prime-color;
+                    flex-direction: column;
+                   
+
+                    .cart-content{ 
+                        width:80%;
+                        height:40%;
+                    }
 
                     button {
-                        width: 100%;
-                        height: 100%;
+                        width: 80%;
+                        height: 45%;
                         display: flex;
                         justify-content: center;
-                        align-items: center;
+                        align-items: center; background: $prime-color;
                         outline: none;
-                        border: none;
-                        background: none;
+                        border-radius: 0;
                         color: white;
                         font-size: 12px;
 
